@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="JupiterToys">
+        <classes>
+            <class name="TestScripts.TestCases">
+                <methods>
+                    <include name="TestCase1"/>
+                    <include name="Testcase2"/>
+                    <include name="Testcase3"/>
+                    <include name="Testcase4"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
