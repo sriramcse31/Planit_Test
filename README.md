@@ -10,5 +10,5 @@ This framework uses chromedriver compatible for chromeversion 92.0.4515.131
 
 To find the version compatible for the version of chrome you are using please visit https://chromedriver.storage.googleapis.com/index.html, download the corresponding API and copy the same to .\src\test\resources\ChromeDriver folder.
 
-##Executing tests
+## Executing tests
 
