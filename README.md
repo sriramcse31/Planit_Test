@@ -21,5 +21,6 @@ Project reads the application URL from the properties file located under src\tes
 Project is optimised to work on both the versions of the application.
 
 http://jupiter.cloud.planittesting.com
+
 http://jupiter2.cloud.planittesting.com
 
