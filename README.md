@@ -1,5 +1,7 @@
 # Planit_Test - Technical Assessment
 
+## Setup
+
 This framework uses Maven, Selenium with Java and TestNG
 
 Instructions to setup and verify the installation of Maven and JDK are available in the below link.
