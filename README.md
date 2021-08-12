@@ -19,6 +19,7 @@ The projects includes 4 test cases that are all included in one class 'TestCases
 Project reads the application URL from the properties file located under src\test\resources.
 
 Project is optimised to work on both the versions of the application.
+
 http://jupiter.cloud.planittesting.com
 http://jupiter2.cloud.planittesting.com
 
