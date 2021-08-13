@@ -29,5 +29,6 @@ http://jupiter2.cloud.planittesting.com
 This can be done by creating a batch file with below 
 
 cd "testng.xml file location"
+
 mvn clean test
 
