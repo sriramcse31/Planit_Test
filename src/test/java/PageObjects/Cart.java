@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.Reporter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -45,6 +46,7 @@ public class Cart extends ReuseMethods {
 
             if(cartItemName.equals(productName)){
                 Assert.assertEquals( quantity, itemCount, "Product "+ productName + " is added "+ quantity +" times as expected");
+                Reporter.log("Verified "+ productName + " quantity in the cart!!");
                 break;
             }
         }
@@ -76,6 +78,7 @@ public class Cart extends ReuseMethods {
                 if(prd.productName.equals(cartItemName))
                 {
                     Assert.assertEquals(prd.productPrice, price, "Product "+ cartItemName +"'s price is validated again shopping page");
+                    Reporter.log("Price of the product "+ cartItemName + " has been validated!!");
                     break;
                 }
             }
@@ -98,6 +101,7 @@ public class Cart extends ReuseMethods {
             expectedTotal = itemCount * price;
 
             Assert.assertEquals(expectedTotal, subTotal,  "Product "+ cartItemName +"'s price is validated again shopping page");
+            Reporter.log("Subtotal of the item " + cartItemName + " has been validated!!");
         }
     }
 
@@ -115,5 +119,6 @@ public class Cart extends ReuseMethods {
         }
 
         Assert.assertEquals(Double.valueOf(driver.findElement(cartTotal).getText().replace("Total: ","")), expectedTotal, "Validating the total value of the cart");
+        Reporter.log("Total value of the cart has been validated!!");
     }
 }

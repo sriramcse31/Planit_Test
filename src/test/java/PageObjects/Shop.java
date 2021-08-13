@@ -5,6 +5,7 @@ import TestObjects.Product;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Reporter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +33,7 @@ public class Shop extends ReuseMethods {
             }
             buttonCount++;
         }
+        Reporter.log(quantity +" quantity of item "+ productName+ " has been added to cart");
     }
 
     public void navigateToCart() {
@@ -48,6 +50,7 @@ public class Shop extends ReuseMethods {
             productPrice = Double.parseDouble(driver.findElements(priceTags).get(driver.findElements(items).indexOf(item)).getText().replace("$",""));
             products.add(new Product(productName, productPrice));
         }
+        Reporter.log("All the items in the shopping page are added to cart!!");
         return products;
     }
 }

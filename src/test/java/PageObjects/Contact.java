@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
+import org.testng.Reporter;
 
 public class Contact extends ReuseMethods {
 
@@ -33,8 +34,11 @@ public class Contact extends ReuseMethods {
         driver.findElement(btnSubmit).click();
 
         Assert.assertEquals(driver.findElement(errForeName).isDisplayed(), true, "Error message for ForeName");
+        Reporter.log("Error message for ForeName is visible");
         Assert.assertEquals(driver.findElement(errEmail).isDisplayed(), true, "Error message for Email");
+        Reporter.log("Error message for Email is visible");
         Assert.assertEquals(driver.findElement(errMessage).isDisplayed(), true, "Error message for Message");
+        Reporter.log("Error message for Message field is visible");
     }
 
     public void submitValidDataAndValidate()
@@ -48,6 +52,7 @@ public class Contact extends ReuseMethods {
         driver.findElement(btnSubmit).click();
 
         waitForAnElementWithTextTobeVisible(driver, errorMessage, "we appreciate your feedback");
+        Reporter.log("Form is successfully submitted and redirected!!");
     }
 
     public void navigateToHomePage(){
